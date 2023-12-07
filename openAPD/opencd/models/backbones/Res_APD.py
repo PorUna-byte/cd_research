@@ -17,6 +17,7 @@ import numpy as np
 import random
 import time
 from torch.nn.functional import normalize
+import ipdb
 
 def double_conv(in_channels, out_channels):
     return nn.Sequential(
@@ -218,6 +219,8 @@ class SiaResAPD_18(nn.Module):
     def forward(self, x,t):
         #x,t = inputs
         #encoder
+
+        # ipdb.set_trace()
         conv1_x = self.conv1(x)
         conv1_t = self.conv1(t)
         
